@@ -19,5 +19,12 @@ Park.prototype.has_dino = function(dinosaur){
   return this.dino_ary.includes(dinosaur);
 };
 
+Park.prototype.popular_dino = function(){
+  this.dino_ary.sort(function (a, b) {
+  return b.guestsAttractedPerDay - a.guestsAttractedPerDay;
+});
+return this.dino_ary[0];
+};
+
 
 module.exports = Park;
