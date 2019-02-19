@@ -20,7 +20,7 @@ Park.prototype.has_dino = function(dinosaur){
 };
 
 Park.prototype.popular_dino = function(){
-   let temp_dino_ary = this.dino_ary.map(x => x) //let's make an ary we can mutate
+   let temp_dino_ary = this.dino_ary.slice() //let's make an ary we can mutate slice is neater than map
   temp_dino_ary.sort(function (a, b) { //compares 2 elements and sorts descending
   return b.guestsAttractedPerDay - a.guestsAttractedPerDay;
 });
