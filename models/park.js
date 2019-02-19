@@ -20,10 +20,11 @@ Park.prototype.has_dino = function(dinosaur){
 };
 
 Park.prototype.popular_dino = function(){
-  this.dino_ary.sort(function (a, b) {
+   let temp_dino_ary = this.dino_ary.map(x => x)
+  temp_dino_ary.sort(function (a, b) {
   return b.guestsAttractedPerDay - a.guestsAttractedPerDay;
 });
-return this.dino_ary[0];
+return temp_dino_ary[0];
 };
 
 
