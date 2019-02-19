@@ -20,12 +20,21 @@ Park.prototype.has_dino = function(dinosaur){
 };
 
 Park.prototype.popular_dino = function(){
-   let temp_dino_ary = this.dino_ary.map(x => x)
-  temp_dino_ary.sort(function (a, b) {
+   let temp_dino_ary = this.dino_ary.map(x => x) //let's make an ary we can mutate
+  temp_dino_ary.sort(function (a, b) { //compares 2 elements and sorts descending
   return b.guestsAttractedPerDay - a.guestsAttractedPerDay;
 });
 return temp_dino_ary[0];
 };
+
+Park.prototype.find_all_dino_species = function(dinosaur){
+  let temp_dino_ary = this.dino_ary.filter(function(el){
+      return el == dinosaur;
+  });
+  return temp_dino_ary
+};
+
+
 
 
 module.exports = Park;

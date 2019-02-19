@@ -11,7 +11,7 @@ describe('Park', function() {
     park = new Park('Brassic Park',15)
     dinosaur_1 = new Dinosaur('t-rex', 'carnivore', 50);
     dinosaur_2 = new Dinosaur('Stegosaurus', 'herbivore', 28);
-    dinosaur_3 = new Dinosaur('Barney', 'omnivore', 100);
+    dinosaur_3 = new Dinosaur('Barney', 'omnivore', 1);
   })
 
   it('should have a name',function(){
@@ -52,11 +52,18 @@ describe('Park', function() {
   park.add_dino(dinosaur_2);
   park.add_dino(dinosaur_3);
   const actual = park.popular_dino();
-  const expected = dinosaur_3;
+  const expected = dinosaur_1;
   assert.strictEqual(actual,expected);
 });
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function(){
+  park.add_dino(dinosaur_1);
+  park.add_dino(dinosaur_2);
+  park.add_dino(dinosaur_1);
+  const actual = park.find_all_dino_species(dinosaur_1);
+  const expected = [dinosaur_1, dinosaur_1];
+  assert.deepEqual(actual,expected);
+});
 
   it('should be able to remove all dinosaurs of a particular species');
 
