@@ -47,8 +47,13 @@ for (let i = 0; i < this.dino_ary.length; i++){
 };
 return count
 };
+
 Park.prototype.yearly_visitor_count = function(){
 return this.daily_visitor_count() * 365;
+};
+
+Park.prototype.yearly_revenue_count = function(){
+return this.yearly_visitor_count() * this.price_int;
 };
 
 

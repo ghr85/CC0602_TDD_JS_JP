@@ -32,8 +32,8 @@ A park must be able to:
 - Find the dinosaur that attracts the most visitors :white_check_mark:
 - Find all dinosaurs of a particular species :white_check_mark:
 - Calculate the total number of visitors per day :white_check_mark:
-- Calculate the total number of visitors per year
-- Calculate the total revenue from ticket sales for one year
+- Calculate the total number of visitors per year :white_check_mark:
+- Calculate the total revenue from ticket sales for one year :white_check_mark:
 
 ### Extensions
 
