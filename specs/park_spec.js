@@ -80,6 +80,14 @@ describe('Park', function() {
   const expected = 79;
   assert.strictEqual(actual,expected);
 });
+  it('should be able to calculate yearly visitors', function(){
+  park.add_dino(dinosaur_1);
+  park.add_dino(dinosaur_2);
+  park.add_dino(dinosaur_3);
+  const actual = park.yearly_visitor_count();
+  const expected = 28835;
+  assert.strictEqual(actual,expected);
+});
 
 
 
