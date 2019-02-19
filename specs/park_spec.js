@@ -4,7 +4,7 @@ const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
   let park
-  let dino
+  let dinosaur
   beforeEach(function () {
     park = new Park('Brassic Park',15)
     dinosaur = new Dinosaur('t-rex', 'carnivore', 50);
@@ -27,7 +27,7 @@ describe('Park', function() {
     assert.strictEqual(actual,expected);
   });
   it('should be able to add a dinosaur to its collection',function(){
-    park.add_dino(dinsoaur);
+    park.add_dino(dinosaur);
     const actual = park.dino_ary.length;
     const expected = 1;
     assert.strictEqual(actual,expected);
