@@ -15,22 +15,22 @@ Use the start point provided, which contains the tested `Dinosaur` model and the
 
 A dinosaur must have:
 
-- A species
-- A diet (e.g. carnivore, herbivore or omnivore)
-- An average number of visitors attracted per day
+- A species:white_check_mark:
+- A diet (e.g. carnivore, herbivore or omnivore) :white_check_mark:
+- An average number of visitors attracted per day :white_check_mark:
 
 A park must have:
 
-- A name
-- A ticket price
-- A collection of dinosaurs
+- A name :white_check_mark:
+- A ticket price :white_check_mark:
+- A collection of dinosaurs :white_check_mark:
 
 A park must be able to:
 
-- Add a dinosaur to its collection of dinosaurs
-- Remove a dinosaur from its collection of dinosaurs
-- Find the dinosaur that attracts the most visitors
-- Find all dinosaurs of a particular species
+- Add a dinosaur to its collection of dinosaurs :white_check_mark:
+- Remove a dinosaur from its collection of dinosaurs :white_check_mark:
+- Find the dinosaur that attracts the most visitors :white_check_mark:
+- Find all dinosaurs of a particular species :white_check_mark:
 - Calculate the total number of visitors per day
 - Calculate the total number of visitors per year
 - Calculate the total revenue from ticket sales for one year
@@ -39,7 +39,7 @@ A park must be able to:
 
 A park must be able to:
 
-- Remove all dinosaurs of a particular species
+- Remove all dinosaurs of a particular species :white_check_mark:
 - Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type  
 Example: `{ 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }`
 

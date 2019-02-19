@@ -72,6 +72,14 @@ describe('Park', function() {
   const expected = [dinosaur_2];
   assert.deepEqual(actual,expected);
 });
+  it('should be able to calculate daily visitors', function(){
+  park.add_dino(dinosaur_1);
+  park.add_dino(dinosaur_2);
+  park.add_dino(dinosaur_3);
+  const actual = park.daily_visitor_count();
+  const expected = 79;
+  assert.strictEqual(actual,expected);
+});
 
 
 

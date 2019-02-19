@@ -40,6 +40,13 @@ Park.prototype.remove_all_dino_species = function(species){
   this.dino_ary = temp_dino_ary;
   return this.dino_ary;
 };
+Park.prototype.daily_visitor_count = function(){
+let count = 0
+for (let i = 0; i < this.dino_ary.length; i++){
+  count += this.dino_ary[i].guestsAttractedPerDay;
+};
+return count
+};
 
 
 
