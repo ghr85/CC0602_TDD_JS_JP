@@ -4,10 +4,14 @@ const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
   let park
-  let dinosaur
+  let dinosaur_1
+  let dinosaur_2
+  let dinosaur_3
   beforeEach(function () {
     park = new Park('Brassic Park',15)
-    dinosaur = new Dinosaur('t-rex', 'carnivore', 50);
+    dinosaur_1 = new Dinosaur('t-rex', 'carnivore', 50);
+    dinosaur_2 = new Dinosaur('Stegosaurus', 'herbivore', 28);
+    dinosaur_3 = new Dinosaur('Barney', 'omnivore', 1);
   })
 
   it('should have a name',function(){
@@ -27,15 +31,20 @@ describe('Park', function() {
     assert.strictEqual(actual,expected);
   });
   it('should be able to add a dinosaur to its collection',function(){
-    park.add_dino(dinosaur);
-    const actual = park.dino_ary.length;
-    const expected = 1;
+    park.add_dino(dinosaur_1);
+    const actual = park.has_dino(dinosaur_1)
+    const expected = true;
+    assert.strictEqual(actual,expected);
+  });
+  it('should be able to remove a dinosaur from its collection',function(){
+    park.add_dino(dinosaur_1);
+    park.add_dino(dinosaur_2);
+    park.remove_dino(dinosaur_1);
+    const actual = park.has_dino(dinosaur_1);
+    const expected = false;
     assert.strictEqual(actual,expected);
   });
 
-
-
-  it('should be able to remove a dinosaur from its collection');
 
   it('should be able to find the dinosaur that attracts the most visitors');
 
