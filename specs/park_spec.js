@@ -60,7 +60,7 @@ describe('Park', function() {
   park.add_dino(dinosaur_1);
   park.add_dino(dinosaur_2);
   park.add_dino(dinosaur_1);
-  const actual = park.find_all_dino_species(dinosaur_1);
+  const actual = park.find_all_dino_species(dinosaur_1.species);
   const expected = [dinosaur_1, dinosaur_1];
   assert.deepEqual(actual,expected);
 });
@@ -68,11 +68,11 @@ describe('Park', function() {
   park.add_dino(dinosaur_1);
   park.add_dino(dinosaur_2);
   park.add_dino(dinosaur_1);
-  const actual = park.remove_all_dino_species(dinosaur_1);
+  const actual = park.remove_all_dino_species(dinosaur_1.species);
   const expected = [dinosaur_2];
   assert.deepEqual(actual,expected);
 });
 
-  
+
 
 });

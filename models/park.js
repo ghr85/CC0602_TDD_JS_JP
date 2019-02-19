@@ -27,15 +27,15 @@ Park.prototype.popular_dino = function(){
 return temp_dino_ary[0];
 };
 
-Park.prototype.find_all_dino_species = function(dinosaur){
+Park.prototype.find_all_dino_species = function(species){
   let temp_dino_ary = this.dino_ary.filter(function(el){
-      return el == dinosaur;
+      return el.species == species;
   });
   return temp_dino_ary
 };
-Park.prototype.remove_all_dino_species = function(dinosaur){
+Park.prototype.remove_all_dino_species = function(species){
   let temp_dino_ary = this.dino_ary.filter(function(el){
-      return el !== dinosaur;
+      return el.species !== species;
   });
   this.dino_ary = temp_dino_ary;
   return this.dino_ary;
