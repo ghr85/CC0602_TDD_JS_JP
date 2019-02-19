@@ -33,6 +33,13 @@ Park.prototype.find_all_dino_species = function(dinosaur){
   });
   return temp_dino_ary
 };
+Park.prototype.remove_all_dino_species = function(dinosaur){
+  let temp_dino_ary = this.dino_ary.filter(function(el){
+      return el !== dinosaur;
+  });
+  this.dino_ary = temp_dino_ary;
+  return this.dino_ary;
+};
 
 
 
