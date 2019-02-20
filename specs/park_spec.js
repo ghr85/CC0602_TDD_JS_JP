@@ -70,7 +70,7 @@ describe('Park', function() {
   park.add_dino(dinosaur_1);
   const actual = park.remove_all_dino_species(dinosaur_1.species);
   const expected = [dinosaur_2];
-  assert.deepEqual(actual,expected);
+  assert.deepStrictEqual(actual,expected);
 });
   it('should be able to calculate daily visitors', function(){
   park.add_dino(dinosaur_1);
@@ -95,6 +95,14 @@ describe('Park', function() {
   const actual = park.yearly_revenue_count();
   const expected = 432525;
   assert.strictEqual(actual,expected);
+});
+  it('should be able to list diet count', function(){
+  park.add_dino(dinosaur_1);
+  park.add_dino(dinosaur_2);
+  park.add_dino(dinosaur_3);
+  const actual = park.diet_count();
+  const expected = { 'carnivore': 1, 'omnivore': 1, 'herbivore': 1 };
+  assert.deepStrictEqual(actual,expected);
 });
 
 
